@@ -98,7 +98,15 @@ export default {
           component: './user/login',
         },
       ],
+      proxy: {
+        '/dev': {
+          target: 'http://localhost:8080/test/joke',
+          changeOrigin: true,
+          pathRewrite: { '^/dev': '' }
+        },
+      },
     },
+
     {
       path: '/',
       component: '../layouts/SecurityLayout',
