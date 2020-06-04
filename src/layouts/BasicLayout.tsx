@@ -86,13 +86,13 @@ const defaultFooterDom = (
 );
 
 const footerRender: BasicLayoutProps['footerRender'] = () => {
-  /*if (!isAntDesignPro()) {
+  if (!isAntDesignPro()) {
     return defaultFooterDom;
-  }*/
+  }
 
   return (
     <>
-     {/* {defaultFooterDom}*/}
+     { {defaultFooterDom}}
       <div
         style={{
           padding: '0px 24px 24px',

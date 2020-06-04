@@ -98,13 +98,13 @@ export default {
           component: './user/login',
         },
       ],
-      proxy: {
+     /* proxy: {
         '/dev': {
-          target: 'http://localhost:8080/test/joke',
+          target: 'http://localhost:8080',
           changeOrigin: true,
-          pathRewrite: { '^/dev': '' }
+          //pathRewrite: { '^/dev': '' }
         },
-      },
+      },*/
     },
 
     {
@@ -146,6 +146,11 @@ export default {
                   authority: ['admin'],
                 },
               ],
+            },
+            {
+              name:'items',
+              path:'/items',
+              component:'items'
             },
             {
               name: 'list.table-list',

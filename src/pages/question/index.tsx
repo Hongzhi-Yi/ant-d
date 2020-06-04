@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'dva'
-import {Card, Row, Col, Form, Button, Input, Checkbox} from 'antd'
+import {Card} from 'antd'
 const namespace = 'puzzlecards';
 
 const mapStateToProps = (state) => {
@@ -29,6 +29,7 @@ export default class PuzzleCardsPage extends Component {
           this.props.cardList.map(card => {
             return (
               <Card key={card.id}>
+                <div>{card.p}
                 <div>Q: {card.setup}</div>
                 <div>
                   <strong>A: {card.punchline}</strong>
